@@ -7,6 +7,7 @@ services:
       - 80:8080
       - 443:50000
     volumes:
+      # Note: volume ownership needs to be set to 100
       - ./volumes/jenkins:/var/jenkins_home
       - ./volumes/var/run/docker.sock:/var/run/docker.sock
       - ./volumes/usr/local/bin/docker:/usr/local/bin/docker
