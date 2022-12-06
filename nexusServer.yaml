@@ -6,4 +6,5 @@ services:
     ports:
       - 80:8081
     volumes:
+    # Note: volume ownership needs to be set to 200
       - ./volumes/nexus-data:/nexus-data
