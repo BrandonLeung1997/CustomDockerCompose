@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  webapi:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    ports:
+      - "4999:4999"
+    volumes:
+      - .:/app
+      - /app/bin/
+      - /app/obj/
+    command: dotnet watch run --project /app/dwssservice.csproj --urls=http://+:4999
